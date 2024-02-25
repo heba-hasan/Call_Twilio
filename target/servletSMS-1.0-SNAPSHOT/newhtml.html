@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="newcss.css">
+    </head>
+    <body>
+        <div class="center">
+            <p>Enter Phone Number here</p>
+            <form method="get" action="NewServlet">
+                <table>
+                    <tr>
+                        <td>  <label>To</label></td>
+                        <td><input type="text" name="to"></td>
+                        <td><input type="submit" value="Call" class="sub" onclick="showstatus"></td>
+                    </tr>
+                    <br>
+                     <!--
+                    <tr>
+                        <td>  <label>Message</label></td>
+                        <td><input type="text" name="sms"></td>
+                    </tr>-->
+                </table>
+                <br> 
+                   
+                <br><br>
+                <a href="Showcalllogs">Show Logs</a>
+            </form>
+            <span class="status" style="display: block"></span>
+        </div>
+        <script src="Showstatus.js"></script>
+    </body>
+</html>
