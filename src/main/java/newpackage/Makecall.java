@@ -28,7 +28,7 @@ import java.util.logging.Logger;
  * @author W10 21H2 IOT
  */
 public class Makecall {
-       
+       static  String Status;
 
     public Call createcall(String ACCOUNT_SID,String AUTH_TOKEN,String sendTo,String Twilio_number ) throws SQLException
   {
@@ -53,6 +53,7 @@ public class Makecall {
             System.out.println("Call Status: " + callStatus);
  
             if (callStatus == Call.Status.COMPLETED) {
+                  Status="completed";
         DB.insertToDB(call.getSid(), call.getFrom(), call.getTo(), call.getDuration(), call.getDateCreated().toString(), call.getStatus().toString());
                 break;
             }
