@@ -36,7 +36,10 @@ public class NewServlet extends HttpServlet {
           
           String reciever_number=request.getParameter("to");
  Call call=makecall.createcall(cred[1], cred[0],cred[2],reciever_number);
-
+if (Makecall.Status=="completed")
+{
+response.sendRedirect("callsucess.html");
+}
   // System.out.println("sttts "+res.getString("msg_status"));
   // request.setAttribute("messagestatus", message.getStatus());
 //   if(db.getmessages().getString("msg_status")=="delieverd")
