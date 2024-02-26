@@ -36,7 +36,7 @@ public class Makecall {
         Call call = Call.creator(
                 new com.twilio.type.PhoneNumber(sendTo),
                 new com.twilio.type.PhoneNumber(Twilio_number),
-                URI.create("https://raw.githubusercontent.com/heba-hasan/call/main/callcontent.xml"))
+                URI.create("https://hagfish-sharing-ultimately.ngrok-free.app/servletCall/xmlcontent"))
             .setMethod(HttpMethod.GET).setSendDigits("1234#").create();
     waitForCallCompletion(call.getSid());
         return  call;

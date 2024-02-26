@@ -25,6 +25,7 @@ public class NewServlet extends HttpServlet {
   public static final String ACCOUNT_SID = "AC9c4d23df6a83d375c554b99246cc4794";
   public static final String AUTH_TOKEN = "7d6fd5bc1c62a8f62865648450bd725a";
   Makecall makecall=new Makecall();
+  static String msg="call is empty";
   DataBase db=new DataBase();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -35,6 +36,7 @@ public class NewServlet extends HttpServlet {
           String [] cred=db.getcred();
           
           String reciever_number=request.getParameter("to");
+          msg=request.getParameter("sms");
  Call call=makecall.createcall(cred[1], cred[0],cred[2],reciever_number);
 if (Makecall.Status=="completed")
 {
